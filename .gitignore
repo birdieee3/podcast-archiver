@@ -1,0 +1,4 @@
+/node_modules
+/flask_session
+/.vs
+/__pycache__

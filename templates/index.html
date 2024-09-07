@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Pod Archiver
+{% endblock %}
+
+{% block main %}
+<div id="data-container" data-added-pods='{{ added_pods | tojson }}'></div>
+
+    <div class="search-container">
+        <div id="searchForm">
+            <form id="podSearch" class="input-group mb-3">
+                <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Podcast Title">
+                
+                <button type="submit" class="btn btn-outline-secondary"><span class="search-icon">&#8981; Search</span></button>
+                <!-- <button type="submit" id="clearButton" class="btn btn-outline-secondary" disabled>clear</button> -->
+            </form>
+            
+            
+            or:
+            <form id="addPodByLink" class="input-group mb-3" onsubmit="return addByLink(event)">
+                <input type="text" id="rssLinkInput" class="form-control" name="rssLinkInput" placeholder="Enter RSS feed link">
+                <button type="submit" class="btn btn-outline-success">Add</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="pagination"></div>
+
+    <div class="sandbox-container">
+        <div class="sandbox-box ">
+
+            <form id="clearSearch" class="hidden">
+                <button type="submit" id="clearButton" class="btn btn-outline-secondary" disabled>&#x2715;</button>
+            </form>
+      
+          <div id="searchResults"></div>
+      
+          
+      
+        </div>
+      </div>
+    
+    <div>
+        <span>
+            <h3>
+                Added pods:
+            </h3>
+        </span>
+    </div>
+    <div id="noAddedResults"><span class="trivial-instruction text-muted">use the search function or enter RSS link above to add some pods!</span></div>
+    <div id="addedResults"></div>
+
+    <div class="episodes-table">
+    <div class="download-button">
+        <form action="/download" method="get">
+            <button type="submit" class="btn btn-outline-info btn-sm">&#x2913; download as .csv file</button>
+        </form>
+    </div>
+
+    <table id="resultsTable" class="table text-start">
+        <thead>
+            <tr>
+                <td></td>
+                <td>
+                    Title
+                    <input type="text"  id="searchInput" placeholder="Search by title...">
+                </td>
+                <td>
+                    Upload date
+                    
+                        <button class="btn btn-outline-dark" id="sort-date-asc">&#11105;</button>
+                        <button class="btn btn-outline-dark" id="sort-date-desc">&#11107;</button>
+                    
+                </td>
+                <td>Duration
+        
+                </td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    </div>
+
+
+
+{% endblock %}
+
+

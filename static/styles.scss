@@ -1,0 +1,247 @@
+// custom variables:
+
+//  added pod list:
+$card-border-radius: 25px;
+//  search results:
+$pagination-color: --bs-body-color; //non-selected pages
+$pagination-active-color: --bs-body-color; //selected page
+$pagination-active-bg: --bs-secondary-color; //selected page
+$pagination-active-border-color: --bs-info-border-subtle; //not sure this does anything
+$pagination-hover-color: --bs-secondary-color; //hover text color
+
+
+
+// importing bootstrap:
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// some more css:
+
+.birdieee-logo {
+    height: 80px;
+    width: 80px;
+    margin-right: 10px;
+}
+.site-title {
+    color: #f26522;
+    font-family: Georgia, serif;
+}
+
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+/* search */
+
+.hidden {
+    display: none;
+}
+
+#clearButton {
+    size: 0.5;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchForm {
+    display:flex;
+    gap:5px;
+}
+
+form {
+    display: inline;
+}
+
+// added pods cards
+
+.trivial-instruction { // the text which is displayed when no pods have been added
+    font-style: italic;
+    color: $secondary;
+}
+
+.added-pod { // the added pod card which contains card-body
+    scale: 0.9;
+    margin: auto;
+}
+.card-body { // the card
+    align-items: center;
+    text-align: left;
+    display: flex;
+    
+}
+
+.added-pod-icon { // pod icon in the card
+    
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    
+}
+
+.text-container { // container which contains the added-pod-title
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+.added-pod-title { // pod title in the card
+    font-size: 100%;
+    font-weight: bold;
+    white-space: normal;
+    
+}
+
+.added-pod-remove-button { // the remove button in the card
+    margin-left: 10px;
+    margin-right: 0px;
+    flex-shrink: 0;
+    height: 100px;
+    width: 25px;
+}
+.added-pod-remove-button:hover {
+    background-color: lightgrey;
+}
+
+
+// search results
+
+.sandbox-container { // contains the box which contains search results
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+}
+
+.sandbox-box { // contains the search results
+    display: flex;
+    flex-direction: column;
+    //align-items: center;
+    width: 95%;
+    min-height: 0;
+    //background-color: ghostwhite;
+    //border-radius: 25px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+// search result displaying
+
+.searchresult-row { // the whole row containing one search result
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+    
+    border-top: 1px solid lightgrey;
+    padding-top: 10px; 
+    //background-color:ghostwhite;
+    //padding-left: 10px;
+    //padding-right: 10px;
+}
+
+.searchresult-img { // pod icon in the search results
+    margin-right: 10px; 
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+
+}
+
+.searchresult-name { // pod title in the search results
+    flex-grow: 1;
+    text-align: left;
+    max-width: 60%; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.searchresult-add { // add button in the search results
+    margin-left: auto; 
+    margin-right: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: bold;
+}
+
+// the little itunes and rss icons in the search results
+.searchresult-itunesurl {
+    margin-left: 10px;
+}
+.searchresult-url {
+    margin-left: 5px; 
+}
+.link-icon {
+    width:25px;
+    height:25px;
+}
+
+
+#clearButton {
+    margin-bottom: 5px;
+}
+//results
+
+.episodes-table { //the table div which includes the download button
+    margin-top: 100px;
+}
+
+
+.no-icon-so-just-title { // edge cases where the pod title needs to be shown instead of the ep icon when pod icon is not found either
+    font-size: 0.75em;
+}
+
+.title-cell { // defines width of the title and prevents overflow
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title-collapse { // makes the title display as normal text even though it is clickable
+    text-decoration: none;
+    color: $body-color;
+}
+
+.desc-body { // the description that shows upon clicking the title
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    max-width:400px;
+    font-size: 0.75em;
+}
+.collapse.show { // idk if this is redundant now but ill leave it
+    width:100%;
+}
+.collapsing { // no transition to the collapse thing; instant toggle
+    transition: none!important;
+}
+
+//download button
+
+.download-button {
+    float: right;
+    margin-bottom: 20px;
+}
+
+// credits.html
+
+.credits-text {
+    text-align:left;
+    line-height: 1.6;
+}
+
+// embedded audio
+
+audio {
+    display:block;
+}

@@ -1,0 +1,14 @@
+cs50
+flask
+flask_session
+pytz
+requests
+
+feedparser
+datetime
+re
+functools
+
+jsonify
+csv
+io
