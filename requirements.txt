@@ -7,6 +7,4 @@ requests
 feedparser
 datetime
 
-functools
-
 jsonify
