@@ -1,7 +1,7 @@
 # birdieee's pod archiver
-#### Video Demo:  [on YouTube](https://www.youtube.com/watch?v=JrnufwtO6XY)
+#### Video Demo:  [YouTube](https://www.youtube.com/watch?v=JrnufwtO6XY)
 
-#### Deployed on: [pod-archiver.onrender.com](https://pod-archiver.onrender.com)
+#### Deployed: [pod-archiver.onrender.com](https://pod-archiver.onrender.com)
 
 ## TODO:
 
