@@ -8,3 +8,5 @@ feedparser
 datetime
 
 jsonify
+
+gunicorn
