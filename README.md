@@ -1,5 +1,9 @@
 # birdieee's pod archiver
-#### Video Demo:  [https://www.youtube.com/watch?v=JrnufwtO6XY](on YouTube)
+#### Video Demo:  [on YouTube](https://www.youtube.com/watch?v=JrnufwtO6XY)
+
+## TODO:
+
+optimize for displaying on mobile devices
 
 ## Description: What it does
 
