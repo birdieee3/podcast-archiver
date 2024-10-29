@@ -3,16 +3,18 @@
 
 #### Deployed: [pod-archiver.onrender.com](https://pod-archiver.onrender.com) (currently may be slow to load)
 
+## Summary
 
-## What it does
+This is a web app via which the user may search for and add podcasts to selection (the search uses iTunes API) or add manually via RSS link. The episodes from the selected podcasts are then displayed. You may click on the title to view the episode summary, play the audio, and download a .csv of your episodes.
 
-Search for a podcast and add it to the selection (you can also add via RSS link!).
+I used a Flask (Python) backend and vanilla JavaScript frontend. This was my first project using JS to this extent, and as such, there are some ineffeciencies I would alleviate.
 
-View all episodes of the selected podcasts (+ search, sort, play audio, view episode shownotes by clicking on the title).
+If I had to do it over again, I would:
+- Use a flex layout for consistency and mobile-compatibility. I was just beginning to learn css and it is messy here.
+- Be more consistent with my JS methods and variable declarations
 
-Download the selection of episodes as .csv (_currently shownotes are not saved to csv_).
-
-### Extended description
+## Extended summary
+### Description
 
 _birdieee's pod archiver_ is a Flask app via which the user may select one or multiple podcast feeds, either by using the search function and adding to the selection from the results, or by manually entering a valid RSS link, including non-public RSS links. The added podcasts are displayed (with accompanying buttons via which the user may remove any podcast feed they have added), and all episodes of the selected podcast feeds are displayed in an HTML table. The entire selection can be cleared at once by pressing _clear session_ at the top.
 
